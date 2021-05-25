@@ -5,10 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ARENA</title>
-    <link rel="stylesheet" href="css/style.min/css" />
+    <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
-    <main>
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <span class="header__logo">Arena</span>
+          <div class="header__inner">
+            <nav class="header__menu">
+              <ul class="header__list">
+                <li class="header__item"><a href="#">Тренировки</a></li>
+                <li class="header__item"><a href="#">О клубе</a></li>
+                <li class="header__item"><a href="#">тренера</a></li>
+                <li class="header__item"><a href="#">Абонементы</a></li>
+                <li class="header__item"><a href="#">Контакты</a></li>
+              </ul>
+            </nav>
+            <div class="header__social">
+              <img
+                src="./images/banner/insta.svg"
+                alt="icons-social"
+                class="header__social-img"
+              />
+              <img
+                src="./images/banner/tel.svg"
+                alt="icons-social"
+                class="header__social-img"
+              />
+            </div>
+          </div>
+          <button class="button">Записаться</button>
+          <button class="button button_burger">
+            <span class="visually-hidden">burger</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="main">
       <section class="banner">
         <div class="container"></div>
       </section>

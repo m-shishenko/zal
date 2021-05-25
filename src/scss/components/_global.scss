@@ -5,6 +5,9 @@
   margin: 0;
   border: 0;
   box-sizing: border-box;
+  font-family: "HelveticaNeueCyr";
+  font-weight: 400;
+  color: #fff;
 }
 nav,
 footer,
@@ -60,6 +63,7 @@ h6 {
 
 .container {
   max-width: 1600px;
+  height: 100%;
   margin: 0 auto;
 }
 
@@ -72,6 +76,11 @@ h6 {
   padding: 0;
   overflow: hidden;
   clip: rect(0 0 0 0);
+}
+
+.main {
+  height: 7000px;
+  background: linear-gradient(180deg, #0b0744 0%, #022cb1 67.65%, #0036d7 100%);
 }
 
 @media (max-width: 768px) {
