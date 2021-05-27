@@ -16,11 +16,15 @@
   &__wrapper {
     height: 100%;
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     align-items: center;
+    &-btn {
+      flex: 0 1 265px;
+    }
   }
 
   &__logo {
+    flex: 0 1 391px;
     font-weight: 900;
     font-size: 35px;
     line-height: 43px;
@@ -42,9 +46,14 @@
   }
 
   &__social {
-    flex: 0 1 100px;
+    flex: 0 1 67px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &__social-img {
+    width: 20px;
+    height: 20px;
   }
 }
