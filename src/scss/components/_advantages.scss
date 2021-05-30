@@ -1,0 +1,28 @@
+.advantages {
+  padding-bottom: 200px;
+  &__list {
+    margin: 0 -40px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    padding: 0 40px;
+    flex: 0 1 25%;
+  }
+
+  &__img {
+    display: block;
+    margin: 0 auto 30px;
+    width: 88px;
+    height: 72px;
+    object-fit: contain;
+  }
+
+  &__descr {
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #fff;
+  }
+}

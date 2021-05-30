@@ -1,0 +1,67 @@
+.description {
+  padding-bottom: 180px;
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -30px;
+  }
+
+  &__row-item {
+    padding: 0 30px;
+    flex: 0 1 50%;
+  }
+
+  &__img1 {
+    margin: 90px 0 20px;
+    display: block;
+    width: 509px;
+    height: 339px;
+    object-fit: cover;
+  }
+
+  &__img-descr {
+    max-width: 85%;
+    padding-left: 30px;
+    font-size: 16px;
+    line-height: 18px;
+    color: #fff;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 0;
+      display: block;
+      width: 20px;
+      height: 20px;
+      color: #fff;
+      background: url("../images/description/plus.svg") center center/20px 20px
+        no-repeat;
+    }
+  }
+
+  &__slogan {
+    margin-top: 100px;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    color: #fff;
+  }
+
+  &__title {
+    margin-bottom: 100px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    color: #fff;
+  }
+
+  &__img2 {
+    margin-bottom: 20px;
+    display: block;
+    width: 553px;
+    height: 657px;
+    object-fit: cover;
+  }
+}
