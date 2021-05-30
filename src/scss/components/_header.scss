@@ -6,6 +6,10 @@
   left: 0;
   z-index: 10;
 
+  & .container {
+    max-width: 1600px;
+  }
+
   &__inner {
     flex: 0 1 844px;
     display: flex;

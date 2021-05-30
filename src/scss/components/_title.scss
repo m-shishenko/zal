@@ -1,0 +1,21 @@
+.title {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: #fff;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 90%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    transform: matrix(0.99, -0.11, 0.11, 0.99, 0, 0);
+  }
+}

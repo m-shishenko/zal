@@ -62,7 +62,7 @@ h6 {
 }
 
 .container {
-  max-width: 1600px;
+  max-width: 1200px;
   height: 100%;
   margin: 0 auto;
 }
@@ -83,14 +83,14 @@ h6 {
   background: linear-gradient(180deg, #0b0744 0%, #022cb1 67.65%, #0036d7 100%);
 }
 
-@media (max-width: 768px) {
-  .container {
-    padding: 0 30px;
-  }
-}
+// @media (max-width: 768px) {
+//   .container {
+//     padding: 0 30px;
+//   }
+// }
 
-@media (max-width: 576px) {
-  .container {
-    padding: 0 15px;
-  }
-}
+// @media (max-width: 576px) {
+//   .container {
+//     padding: 0 15px;
+//   }
+// }
