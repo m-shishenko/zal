@@ -7,7 +7,7 @@
   z-index: 10;
 
   &__inner {
-    flex: 0 1 944px;
+    flex: 0 1 844px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,15 +16,15 @@
   &__wrapper {
     height: 100%;
     display: flex;
-    // justify-content: space-between;
     align-items: center;
     &-btn {
-      flex: 0 1 265px;
+      flex: 1 1 265px;
     }
   }
 
   &__logo {
-    flex: 0 1 391px;
+    margin-left: 55px;
+    flex: 1 1 391px;
     font-weight: 900;
     font-size: 35px;
     line-height: 43px;
@@ -43,6 +43,12 @@
   }
 
   &__item {
+    & a {
+      font-size: 14px;
+      line-height: 16px;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
   }
 
   &__social {
@@ -55,5 +61,9 @@
   &__social-img {
     width: 20px;
     height: 20px;
+  }
+
+  &__btn {
+    margin: 0 25px 0 auto;
   }
 }

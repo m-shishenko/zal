@@ -1,4 +1,63 @@
 .banner {
-  height: 100vh;
+  min-height: 700px;
   background: url("../images/banner/bn1.png") center center no-repeat;
+  mix-blend-mode: color-dodge;
+
+  & .container {
+    min-height: 700px;
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__person {
+    position: absolute;
+    top: 150px;
+    left: 460px;
+    font-size: 16px;
+    line-height: 18px;
+    color: #fff;
+  }
+
+  &__title {
+    position: absolute;
+    top: 220px;
+    left: 460px;
+  }
+
+  &__subtitle {
+    position: absolute;
+    top: 400px;
+    left: 460px;
+  }
+
+  &__time {
+    position: absolute;
+    top: 650px;
+    left: 55px;
+    font-size: 16px;
+    line-height: 18px;
+    color: #fff;
+  }
+
+  &__address {
+    position: absolute;
+    top: 650px;
+    left: 460px;
+    font-size: 16px;
+    line-height: 18px;
+    color: #fff;
+
+    & span {
+      color: #2258fc;
+      cursor: pointer;
+    }
+  }
+
+  &__map {
+    margin-left: 36px;
+    padding-left: 20px;
+    background: url("../images/banner/map.svg") left center no-repeat;
+  }
 }
