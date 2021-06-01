@@ -1,0 +1,61 @@
+.trainers {
+  padding-bottom: 200px;
+
+  &__title {
+    margin-bottom: 125px;
+  }
+
+  &__sliders-inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+
+  &__item {
+    height: 355px;
+    padding: 0 15px;
+    flex: 0 1 25%;
+    overflow: hidden;
+    &:hover {
+      & .trainers__slide-text {
+        transform: translateY(-100%);
+        transition: all 0.5s;
+      }
+    }
+  }
+
+  &__slide {
+    height: 100%;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__slide-text {
+    height: 100%;
+    padding: 150px 20px 0;
+    background: #0141ff;
+    border: 1px solid #0036d7;
+    transition: all 0.5s;
+  }
+
+  &__name {
+    margin-bottom: 21px;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 31px;
+    text-align: center;
+
+    color: #fff;
+  }
+
+  &__sport {
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #fff;
+  }
+}
