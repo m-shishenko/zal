@@ -79,18 +79,17 @@ h6 {
 }
 
 .main {
-  height: 7000px;
   background: linear-gradient(180deg, #0b0744 0%, #022cb1 67.65%, #0036d7 100%);
 }
 
-// @media (max-width: 768px) {
-//   .container {
-//     padding: 0 30px;
-//   }
-// }
+@media (max-width: 768px) {
+  .container {
+    padding: 0 30px;
+  }
+}
 
-// @media (max-width: 576px) {
-//   .container {
-//     padding: 0 15px;
-//   }
-// }
+@media (max-width: 576px) {
+  .container {
+    padding: 0 15px;
+  }
+}

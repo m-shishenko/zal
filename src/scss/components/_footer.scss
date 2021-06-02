@@ -1,0 +1,33 @@
+.footer {
+  height: 102px;
+  background: #0b0744;
+
+  & .container {
+    height: 100%;
+  }
+
+  &__wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__police {
+    font-size: 12px;
+    line-height: 15px;
+    color: #fff;
+  }
+
+  &__copy {
+    font-size: 12px;
+    line-height: 15px;
+    color: #fff;
+  }
+
+  &__dev {
+    font-size: 12px;
+    line-height: 15px;
+    color: #fff;
+  }
+}
