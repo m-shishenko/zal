@@ -318,9 +318,18 @@
         <div class="container">
           <h2 class="title contacts__title">Записаться на тренировку</h2>
           <div class="contacts__wrapper">
-            <div class="contacts__map"></div>
+            <div class="contacts__map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.894615771181!2d33.384604868794604!3d47.913103090123435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40db20a2306d07ad%3A0xbe64a97b55741eca!2z0LLRg9C70LjRhtGPINCS0L7Qu9C-0YHQtdCy0LjRh9CwLCAxLCA5NSwg0JrRgNC40LLQuNC5INCg0ZbQsywg0JTQvdGW0L_RgNC-0L_QtdGC0YDQvtCy0YHRjNC60LAg0L7QsdC70LDRgdGC0YwsIDUwMDAw!5e0!3m2!1sru!2sua!4v1622898533066!5m2!1sru!2sua"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
             <div class="contacts__body">
-              <div class="contacts__lins">
+              <div class="contacts__links">
                 <span class="contacts__tel">
                   <a href="tel:+380673917070">+38 (067) 391 70 70</a>
                 </span>
@@ -328,13 +337,39 @@
               </div>
               <div class="contacts__form">
                 <form>
-                  <input type="text" id="name" placeholder="Ваше имя" />
-                  <select name="" id=""></select>
-                  <input type="text" id="" placeholder="Номер телефона" />
-                  <input type="text" id="" placeholder="Время тренировки" />
-                  <input type="checkbox" name="" id="" />Я согласен(а), с
-                  условием передачи информации
-                  <button class="button">Записаться</button>
+                  <ul class="contacts__form-list">
+                    <li class="contacts__form-item">
+                      <input type="text" id="name" placeholder="Ваше имя" />
+                    </li>
+                    <li class="contacts__form-item">
+                      <select id="select">
+                        <option value="">1234</option>
+                        <option value="">1234</option>
+                        <option value="">1234</option>
+                        <option value="">1234</option>
+                      </select>
+                    </li>
+                    <li class="contacts__form-item">
+                      <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Номер телефона"
+                        required
+                      />
+                    </li>
+                    <li class="contacts__form-item">
+                      <input
+                        type="time"
+                        id="time"
+                        placeholder="Время тренировки"
+                      />
+                    </li>
+                  </ul>
+                  <label class="checkbox" for="checkbox">
+                    <input type="checkbox" id="checkbox" required />
+                    <span>Я согласен(а), с условием передачи информации</span>
+                  </label>
+                  <button class="button contacts__form-btn">Записаться</button>
                 </form>
               </div>
             </div>

@@ -82,6 +82,23 @@ h6 {
   background: linear-gradient(180deg, #0b0744 0%, #022cb1 67.65%, #0036d7 100%);
 }
 
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #fff;
+}
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #fff;
+}
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #fff;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #fff;
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 0 30px;
