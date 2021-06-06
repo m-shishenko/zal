@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   function showTab() {
     let slideIndex = 1;
-    const slides = document.querySelectorAll(".offer__slide"),
+    const slides = document.querySelectorAll(".workouts__slider-item"),
       prev = document.querySelector(".workouts__row-btns-l"),
       next = document.querySelector(".workouts__row-btns-r");
 
@@ -15,9 +15,12 @@ document.addEventListener("DOMContentLoaded", () => {
         slideIndex = slides.length;
       }
 
-      slides.forEach((item) => item.classList.add("hide"));
+      slides.forEach((item) => {
+        item.classList.remove("show", "fade");
+        item.classList.add("hide");
+      });
       slides[slideIndex - 1].classList.remove("hide");
-      slides[slideIndex - 1].classList.remove("show", "fade");
+      slides[slideIndex - 1].classList.add("show", "fade");
     }
 
     function plusSlides(n) {

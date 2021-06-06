@@ -71,3 +71,40 @@
     margin: 0 25px 0 auto;
   }
 }
+
+@media (max-width: 1300px) {
+  .header {
+    &__logo {
+      flex: 1 1 225px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    &__logo {
+      margin: 0;
+      font-size: 20px;
+      line-height: 25px;
+    }
+    &__item {
+      & a {
+        font-size: 10px;
+      }
+    }
+    &__social-img {
+      width: 9px;
+      height: 9px;
+    }
+    &__social {
+      flex: none;
+      width: 32px;
+    }
+    &__btn {
+      margin: 0 0 0 44px;
+    }
+    &__menu {
+      margin-right: 30px;
+    }
+  }
+}

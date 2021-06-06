@@ -87,6 +87,7 @@
 
   &__slider {
     position: relative;
+    overflow: hidden;
     &-box {
       z-index: 10;
       position: absolute;
@@ -112,13 +113,7 @@
     }
 
     &-item {
-      display: none;
-      transition: 1s;
-      opacity: 0;
-      &_active {
-        display: block;
-        opacity: 1;
-      }
+      position: relative;
     }
 
     &-wrapper {
