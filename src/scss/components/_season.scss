@@ -14,11 +14,13 @@
   &__list {
     display: flex;
     margin: 0 -119px;
+    transition: 0.5s;
+    transform: translateX(-264px);
   }
 
   &__item {
     padding: 0 119px;
-    flex: 0 1 725px;
+    flex: 0 1 33.333%;
   }
 
   &__item.active {
@@ -31,7 +33,6 @@
   }
 
   &__wrapper {
-    width: 725px;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -59,8 +60,8 @@
   }
 
   &__body {
-    padding: 100px 20px 0 50px;
-    flex: 1 1 auto;
+    padding: 100px 0 0 30px;
+    width: 262px;
     display: none;
 
     & p {
@@ -70,11 +71,44 @@
       color: #fff;
     }
 
-    & p:last-child {
-      margin-bottom: 0;
+    & p.bold {
       font-weight: 700;
       font-size: 20px;
       line-height: 24px;
+    }
+  }
+
+  &__wrapper-btns {
+    margin-top: 55px;
+    display: flex;
+  }
+
+  &__btns-l {
+    margin-right: 34px;
+    display: block;
+    width: 35px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    & img {
+      width: 100%;
+      height: 8px;
+      object-fit: contain;
+    }
+  }
+
+  &__btns-r {
+    display: block;
+    width: 35px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    & img {
+      width: 100%;
+      height: 8px;
+      object-fit: contain;
     }
   }
 

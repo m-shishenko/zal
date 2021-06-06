@@ -5,21 +5,25 @@
     margin-bottom: 125px;
   }
 
+  &__sliders {
+    overflow: hidden;
+  }
+
   &__sliders-inner {
     display: flex;
-    flex-wrap: wrap;
     margin: 0 -15px;
+    width: 200%;
+    transition: 0.5s;
   }
 
   &__item {
     height: 355px;
+    width: 309px;
     padding: 0 15px;
-    flex: 0 1 25%;
     overflow: hidden;
     &:hover {
       & .trainers__slide-text {
         transform: translateY(-100%);
-        transition: all 0.5s;
       }
     }
   }

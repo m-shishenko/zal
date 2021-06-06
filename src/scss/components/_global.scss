@@ -61,12 +61,6 @@ h6 {
   font-weight: inherit;
 }
 
-.container {
-  max-width: 1200px;
-  height: 100%;
-  margin: 0 auto;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -97,6 +91,24 @@ h6 {
 :-ms-input-placeholder {
   /* Internet Explorer 10+ */
   color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.fade {
+  opacity: 1;
 }
 
 @media (max-width: 768px) {

@@ -85,7 +85,7 @@ function buildDevdJs() {
       webpack({
         mode: "development",
         output: {
-          filename: "script.js",
+          filename: "bundle.js",
         },
         watch: true,
         devtool: "source-map",
@@ -123,7 +123,7 @@ function buildProdJs() {
       webpack({
         mode: "production",
         output: {
-          filename: "script.js",
+          filename: "bundle.js",
         },
         module: {
           rules: [
