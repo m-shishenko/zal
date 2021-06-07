@@ -49,17 +49,10 @@
     }
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .button {
-    width: 95px;
-    height: 26px;
-    font-size: 10px;
-    line-height: 11px;
-    &::after {
-      width: 95px;
-      height: 26px;
-      left: 5px;
-      top: -5px;
+    &_burger {
+      display: flex;
     }
   }
 }

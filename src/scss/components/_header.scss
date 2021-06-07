@@ -68,43 +68,42 @@
   }
 
   &__btn {
+    display: block;
     margin: 0 25px 0 auto;
   }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1600px) {
   .header {
+    border-bottom: 1px solid rgba($color: #fff, $alpha: 0.3);
     &__logo {
+      margin-left: 0;
       flex: 1 1 225px;
     }
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .header {
     &__logo {
-      margin: 0;
-      font-size: 20px;
-      line-height: 25px;
-    }
-    &__item {
-      & a {
-        font-size: 10px;
-      }
-    }
-    &__social-img {
-      width: 9px;
-      height: 9px;
-    }
-    &__social {
-      flex: none;
-      width: 32px;
+      flex: 1 1 auto;
     }
     &__btn {
-      margin: 0 0 0 44px;
+      display: none;
     }
     &__menu {
-      margin-right: 30px;
+      display: none;
+    }
+    &__social {
+      display: none;
+    }
+    &__wrapper-btn {
+      flex: 1 1 auto;
     }
   }
 }
+
+// @media (max-width: 1024px) {
+//   .header {}
+//   }
+// }
