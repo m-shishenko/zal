@@ -189,13 +189,44 @@
 @media (max-width: 768px) {
   .banner {
     &__title {
-      width: 290px;
+      width: 500px;
+    }
+    &__subtitle {
+      width: 450px;
     }
     &__inner-address {
       display: none;
     }
     &__btn {
       display: none;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .banner {
+    padding: 0;
+    background: url(../images/banner/bn2.png) right bottom 70px/ 150% 45% no-repeat;
+    mix-blend-mode: normal;
+    height: 280px;
+    position: relative;
+    &__wrapper {
+      padding: 0 15px;
+      position: absolute;
+      top: 120px;
+      left: 0;
+    }
+    &__person {
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+    &__title {
+      margin-bottom: 30px;
+      width: 100%;
+    }
+    &__subtitle {
+      margin: 0;
+      width: 100%;
     }
   }
 }

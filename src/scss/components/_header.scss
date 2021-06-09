@@ -29,11 +29,20 @@
   &__logo {
     margin-left: 55px;
     flex: 1 1 391px;
-    font-weight: 900;
-    font-size: 35px;
-    line-height: 43px;
-    text-transform: uppercase;
-    color: #fff;
+    & p {
+      font-weight: 900;
+      font-size: 35px;
+      line-height: 43px;
+      text-transform: uppercase;
+      color: #fff;
+    }
+    & p:last-child {
+      display: none;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px;
+      text-transform: none;
+    }
   }
 
   &__menu {
@@ -103,7 +112,14 @@
   }
 }
 
-// @media (max-width: 1024px) {
-//   .header {}
-//   }
-// }
+@media (max-width: 575px) {
+  .header {
+    z-index: 100;
+    padding: 10px 0;
+    &__logo {
+      & p:last-child {
+        display: block;
+      }
+    }
+  }
+}
