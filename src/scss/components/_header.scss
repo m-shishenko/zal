@@ -84,6 +84,7 @@
 
 @media (max-width: 1600px) {
   .header {
+    background: #0b0744;
     border-bottom: 1px solid rgba($color: #fff, $alpha: 0.3);
     &__logo {
       margin-left: 0;
@@ -94,7 +95,6 @@
 
 @media (max-width: 1200px) {
   .header {
-    background: #0b0744;
     &__logo {
       flex: 1 1 auto;
     }

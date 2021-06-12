@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ARENA</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
@@ -269,9 +273,9 @@
       <section class="trainers">
         <div class="container">
           <h2 class="title trainers__title">Тренера Арены</h2>
-          <div class="trainers__sliders">
-            <ul class="trainers__sliders-inner">
-              <li class="trainers__item">
+          <div class="swiper-container trainers__sliders">
+            <ul class="swiper-wrapper trainers__sliders-inner">
+              <li class="swiper-slide trainers__item">
                 <div class="trainers__slide">
                   <img src="images/trainers/description1.jpg" alt="img" />
                 </div>
@@ -280,7 +284,7 @@
                   <p class="trainers__sport">Тренер по Боксу</p>
                 </div>
               </li>
-              <li class="trainers__item">
+              <li class="swiper-slide trainers__item">
                 <div class="trainers__slide">
                   <img src="images/trainers/description1.jpg" alt="img" />
                 </div>
@@ -289,7 +293,7 @@
                   <p class="trainers__sport">Тренер по Боксу</p>
                 </div>
               </li>
-              <li class="trainers__item">
+              <li class="swiper-slide trainers__item">
                 <div class="trainers__slide">
                   <img src="images/trainers/description1.jpg" alt="img" />
                 </div>
@@ -298,7 +302,7 @@
                   <p class="trainers__sport">Тренер по Боксу</p>
                 </div>
               </li>
-              <li class="trainers__item">
+              <li class="swiper-slide trainers__item">
                 <div class="trainers__slide">
                   <img src="images/trainers/description1.jpg" alt="img" />
                 </div>
@@ -307,16 +311,7 @@
                   <p class="trainers__sport">Тренер по Боксу</p>
                 </div>
               </li>
-              <li class="trainers__item">
-                <div class="trainers__slide">
-                  <img src="images/trainers/description1.jpg" alt="img" />
-                </div>
-                <div class="trainers__slide-text">
-                  <p class="trainers__name">Довыборцев Александр</p>
-                  <p class="trainers__sport">Тренер по Боксу</p>
-                </div>
-              </li>
-              <li class="trainers__item">
+              <li class="swiper-slide trainers__item">
                 <div class="trainers__slide">
                   <img src="images/trainers/description1.jpg" alt="img" />
                 </div>
@@ -360,7 +355,32 @@
                 </div>
               </div>
             </li>
-            <li class="season__item active">
+            <li class="season__item">
+              <div class="season__wrapper">
+                <h3 class="season__wrapper-title">Тайский Бокс</h3>
+                <div class="season__img">
+                  <img src="images/season/s1.jpg" alt="img" />
+                </div>
+                <div class="season__body">
+                  <h3 class="season__body-title">Тайский бокс</h3>
+                  <ul class="season__body-list">
+                    <li class="season__body-item">Лимитированый абонемент</li>
+                    <li class="season__body-item">12 занятий</li>
+                    <li class="season__body-item">Индивидуальная тренировка</li>
+                    <li class="season__body-item">700 гр. в месяц</li>
+                  </ul>
+                  <div class="season__wrapper-btns">
+                    <buttons class="season__btns-l">
+                      <img src="images/workouts/ArrowL.svg" alt="arrow" />
+                    </buttons>
+                    <buttons class="season__btns-r">
+                      <img src="images/workouts/ArrowR.svg" alt="arrow" />
+                    </buttons>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="season__item">
               <div class="season__wrapper">
                 <h3 class="season__wrapper-title">Тайский Бокс</h3>
                 <div class="season__img">
@@ -493,7 +513,7 @@
           </a>
         </div>
       </section>
-      <section class="popup-menu">
+      <section class="popup-menu hide">
         <div class="popup-menu__inner">
           <div class="popup-menu__close">
             <button class="popup-menu__close-btn"></button>
@@ -536,6 +556,7 @@
         </ul>
       </div>
     </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/bundle.js"></script>
   </body>
 </html>

@@ -7,11 +7,13 @@
 
   &__sliders {
     overflow: hidden;
+    user-select: none;
+    touch-action: pan-y;
   }
 
   &__sliders-inner {
     display: flex;
-    margin: 0 -15px;
+    // margin: 0 -15px;
     width: 200%;
     transition: 0.5s;
   }
@@ -19,7 +21,7 @@
   &__item {
     height: 355px;
     width: 309px;
-    padding: 0 15px;
+    // padding: 0 15px;
     overflow: hidden;
     &:hover {
       & .trainers__slide-text {
@@ -69,11 +71,11 @@
     padding: 0 0 100px;
     &__sliders {
       &-inner {
-        margin: 0 -10px;
+        // margin: 0 -10px;
       }
     }
     &__item {
-      padding: 0 10px;
+      // padding: 0 10px;
       width: 240px;
       height: 270px;
     }

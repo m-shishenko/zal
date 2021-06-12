@@ -15,7 +15,6 @@
     display: flex;
     margin: 0 -119px;
     transition: 0.5s;
-    transform: translateX(-264px);
   }
 
   &__item {
@@ -140,7 +139,6 @@
     }
     &__list {
       margin: 0 -33px;
-      transform: translateX(-87px);
     }
     &__item {
       padding: 0 33px;
@@ -194,7 +192,6 @@
     }
     &__list {
       margin: 30px -15px 0;
-      transform: translateX(-320px);
     }
     &__item {
       padding: 0 15px;
