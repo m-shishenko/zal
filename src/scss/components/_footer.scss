@@ -6,11 +6,17 @@
     height: 100%;
   }
 
-  &__wrapper {
+  &__list {
+    margin: 0 -10px;
     height: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+  }
+
+  &__item {
+    padding: 0 10px;
+    flex: 0 1 33.333%;
+    text-align: center;
   }
 
   &__police {
@@ -29,5 +35,19 @@
     font-size: 12px;
     line-height: 15px;
     color: #fff;
+  }
+}
+
+@media (max-width: 575px) {
+  .footer {
+    &__list {
+      padding: 10px 0;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+    &__item {
+      padding: 0;
+      flex: 0 1 100%;
+    }
   }
 }
