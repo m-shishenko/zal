@@ -20,7 +20,6 @@
 
   &__item {
     padding: 0 119px;
-    flex: 0 1 33.333%;
   }
 
   &__item.active {
@@ -63,18 +62,17 @@
     padding: 100px 0 0 30px;
     width: 262px;
     display: none;
-
-    & p {
+    &-item {
       margin-bottom: 15px;
       font-size: 16px;
       line-height: 19px;
       color: #fff;
-    }
-
-    & p.bold {
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 24px;
+      &:last-child {
+        margin: 0;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+      }
     }
   }
 
@@ -130,6 +128,125 @@
       position: absolute;
       top: 10px;
       left: 0;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .season {
+    padding-bottom: 100px;
+    &__sliders {
+      max-width: 768px;
+    }
+    &__list {
+      margin: 0 -33px;
+      transform: translateX(-87px);
+    }
+    &__item {
+      padding: 0 33px;
+    }
+    &__img {
+      width: 220px;
+      height: 270px;
+    }
+    &__body {
+      padding: 0 0 0 20px;
+      width: 152px;
+      &-title {
+        padding-left: 11px;
+        margin-bottom: 9px;
+        font-size: 16px;
+        line-height: 20px;
+        &::before {
+          width: 6px;
+          height: 6px;
+          top: 7px;
+        }
+      }
+      &-item {
+        margin-bottom: 5px;
+        font-size: 14px;
+        line-height: 17px;
+        &:last-child {
+          margin: 0;
+          font-size: 16px;
+        }
+      }
+    }
+    &__wrapper {
+      &-title {
+        bottom: 0;
+        font-size: 40px;
+        line-height: 48px;
+      }
+      &-btns {
+        margin-top: 14px;
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .season {
+    &__sliders {
+      padding: 0 15px;
+      height: 380px;
+    }
+    &__list {
+      margin: 30px -15px 0;
+      transform: translateX(-320px);
+    }
+    &__item {
+      padding: 0 15px;
+    }
+    &__img {
+      width: 290px;
+      height: 350px;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: rgba($color: #090729, $alpha: 0.7);
+      }
+    }
+    &__body {
+      z-index: 10;
+      padding: 20px 20px 0 0;
+      width: 100%;
+      position: absolute;
+      right: 0;
+      text-align: right;
+      &-title {
+        padding: 0;
+        &::before {
+          display: none;
+        }
+      }
+    }
+    &__wrapper {
+      &-title {
+        z-index: 10;
+        left: 0;
+        bottom: 14px;
+      }
+      &-btns {
+        margin: 0;
+        position: absolute;
+        top: -30px;
+        right: 0;
+      }
+    }
+    &__btns-l {
+      align-items: flex-start;
+      margin-right: 15px;
+    }
+    &__btns-r {
+      align-items: flex-start;
     }
   }
 }
