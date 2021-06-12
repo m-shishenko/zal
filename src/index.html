@@ -56,7 +56,7 @@
       </div>
     </header>
     <main class="main">
-      <section class="banner">
+      <section id="top" class="banner">
         <div class="container">
           <div class="banner__wrapper">
             <p class="banner__person">Индивидуальный подход для каждого</p>
@@ -66,7 +66,7 @@
             <div class="banner__subtitle">
               <img src="./images/banner/allday.svg" alt="subtitle" />
             </div>
-            <a href="#" class="banner__btn">
+            <a href="#welcome" class="banner__btn">
               <img src="./images/banner/arrowD.svg" alt="arrowD" />
             </a>
             <div class="banner__inner-address">
@@ -79,7 +79,7 @@
           </div>
         </div>
       </section>
-      <section class="welcome">
+      <section id="welcome" class="welcome">
         <div class="container">
           <div class="welcome__row">
             <div class="welcome__row-item">
@@ -447,11 +447,18 @@
                     </li>
                     <li class="contacts__form-item">
                       <select id="select">
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
-                        <option value="">4</option>
-                        <option value="">5</option>
+                        <option disabled selected value="">
+                          Интересующее напрвление
+                        </option>
+                        <option value="Бокс">Бокс</option>
+                        <option value="Тайский Бокс">Тайский Бокс</option>
+                        <option value="Борьба">Борьба</option>
+                        <option value="Тяжелая атлетика">
+                          Тяжелая атлетика
+                        </option>
+                        <option value="Функциональная тренировка">
+                          Функциональная тренировка
+                        </option>
                       </select>
                     </li>
                     <li class="contacts__form-item">
@@ -463,14 +470,10 @@
                       />
                     </li>
                     <li class="contacts__form-item">
-                      <input
-                        type="time"
-                        id="time"
-                        placeholder="Время тренировки"
-                      />
+                      <input type="time" id="time" />
                     </li>
                   </ul>
-                  <label class="checkbox" for="checkbox">
+                  <label class="contacts__checkbox" for="checkbox">
                     <input type="checkbox" id="checkbox" required />
                     <span>Я согласен(а), с условием передачи информации</span>
                   </label>
@@ -485,7 +488,7 @@
             >
             <span class="contacts__time">с 8:00 до 21:00</span>
           </div>
-          <a href="#" class="contacts__btn-t">
+          <a href="#top" class="contacts__btn-t">
             <img src="images/contacts/arrow-top.svg" alt="arrowTop" />
           </a>
         </div>

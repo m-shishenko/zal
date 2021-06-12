@@ -18,7 +18,7 @@
 
   &__map {
     width: 50%;
-    min-height: 455px;
+    height: 455px;
   }
 
   &__body {
@@ -109,47 +109,49 @@
     }
 
     &-btn {
+      display: block;
       margin-top: 65px;
     }
 
-    & .checkbox {
-      cursor: pointer;
-      & input {
-        display: none;
-      }
-      & span {
-        padding-left: 40px;
-        position: relative;
-        font-size: 16px;
-        line-height: 19px;
-        color: #fff;
-        &::before {
-          content: "";
-          position: absolute;
-          top: -2px;
-          left: 0;
-          display: block;
-          width: 22px;
-          height: 21px;
-          border: 1px solid #fff;
-          border-radius: 2px;
-        }
-        &::after {
-          content: "";
-          position: absolute;
-          top: 1px;
-          left: 4px;
-          display: block;
-          width: 15px;
-          height: 15px;
-          background: url("../images/contacts/gal.svg") center center/contain
-            no-repeat;
-          display: none;
-        }
-      }
-    }
     & input[type="checkbox"]:checked ~ span::after {
       display: block;
+    }
+  }
+
+  &__checkbox {
+    cursor: pointer;
+    & input {
+      display: none;
+    }
+    & span {
+      padding-left: 40px;
+      position: relative;
+      font-size: 16px;
+      line-height: 19px;
+      color: #fff;
+      &::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: 0;
+        display: block;
+        width: 22px;
+        height: 21px;
+        border: 1px solid #fff;
+        border-radius: 2px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 1px;
+        left: 4px;
+        display: block;
+        width: 15px;
+        height: 15px;
+        background: url("../images/contacts/gal.svg") center center/contain
+          no-repeat;
+        display: none;
+      }
     }
   }
 
@@ -180,6 +182,108 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .contacts {
+    background: none;
+    &__body {
+      padding-left: 40px;
+    }
+    &__links {
+      padding: 0;
+      border: none;
+      margin-bottom: 30px;
+    }
+    &__tel,
+    &__inst {
+      font-size: 16px;
+      line-height: 18px;
+      &::before {
+        top: 0;
+      }
+    }
+    &__tel {
+      margin-right: 25px;
+    }
+    &__form {
+      &-list {
+        margin: 0;
+      }
+      &-item {
+        padding: 0;
+        flex: 0 1 100%;
+      }
+    }
+    &__checkbox span {
+      display: inline-block;
+      font-size: 14px;
+      line-height: 16px;
+    }
+    &__form-btn {
+      margin-top: 35px;
+    }
+    &__addres {
+      font-size: 14px;
+      line-height: 18px;
+    }
+    &__time {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .contacts {
+    &__wrapper {
+      flex-direction: column-reverse;
+    }
+    &__map {
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      padding-top: 20px;
+      width: 100%;
+    }
+    &__body {
+      width: 100%;
+      padding: 0;
+      margin-bottom: 40px;
+    }
+    &__title {
+      margin-bottom: 65px;
+    }
+    &__btn-t {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .contacts {
+    &__title {
+      font-size: 18px;
+    }
+    &__links,
+    &__info {
+      display: flex;
+      flex-wrap: wrap;
+      & span {
+        flex: 0 1 100%;
+        margin: 0 0 20px;
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+    &__form {
+      &-item {
+        margin-bottom: 30px;
+      }
+    }
+    &__time {
+      padding: 0;
     }
   }
 }
