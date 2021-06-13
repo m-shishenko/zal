@@ -105,11 +105,25 @@ h6 {
 .hide {
   display: none;
 }
+.fade {
+  animation: fade 0.6s linear;
+}
 .fade-show {
   animation: fade-show 1s ease-in-out;
 }
 .fade-hide {
   animation: fade-hide 1s ease-in-out;
+}
+
+@keyframes fade {
+  from {
+    transform: scale(0) translate(-100%, -100%);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translate(0%, 0%);
+    opacity: 1;
+  }
 }
 
 @keyframes fade-show {

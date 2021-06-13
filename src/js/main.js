@@ -107,24 +107,109 @@ document.addEventListener("DOMContentLoaded", () => {
   slider();
 
   function showMenu() {
-    const btnOpen = document.querySelector(".header__wrapper-btn"),
-      btnClose = document.querySelector(".popup-menu__close"),
+    const btnOpen = document.querySelector(".button_burger"),
+      btnClose = document.querySelector(".popup-menu__close-btn"),
       body = document.querySelector("body"),
-      popupMenu = document.querySelector(".popup-menu");
+      linkElement = document.querySelectorAll(".popup-menu__item > a"),
+      popupMenu = document.querySelector(".popup-menu"),
+      popupMenuBtn = document.querySelector(".popup-menu__inner > button");
 
-    btnOpen.addEventListener("click", () => {
+    function openMenu() {
       popupMenu.classList.remove("hide", "fade-hide");
       popupMenu.classList.add("show", "fade-show");
       body.style.overflow = "hidden";
-    });
+    }
 
-    btnClose.addEventListener("click", () => {
+    function closeMenu() {
       popupMenu.classList.remove("show", "fade-show");
       popupMenu.classList.add("hide", "fade-hide");
       body.style.overflow = "";
+    }
+
+    btnOpen.addEventListener("click", () => {
+      openMenu();
+    });
+
+    popupMenu.addEventListener("click", (e) => {
+      const target = e.target;
+      if ((target && target == popupMenu) || target == btnClose) {
+        closeMenu();
+      }
+    });
+
+    linkElement.forEach((item) => {
+      item.addEventListener("click", () => {
+        closeMenu();
+      });
+    });
+
+    popupMenuBtn.addEventListener("click", () => {
+      closeMenu();
     });
   }
   showMenu();
+
+  function validInputTel() {
+    const input = document.querySelector("#phone");
+
+    input.addEventListener("input", () => {
+      input.value = input.value.replace(/\D/g, "");
+    });
+  }
+  validInputTel();
+
+  function scrolling() {
+    // const upElem = document.querySelector(upSelector);
+
+    // window.addEventListener("scroll", () => {
+    //   if (document.documentElement.scrollTop > 1650) {
+    //     upElem.classList.add("animated", "fadeIn");
+    //     upElem.classList.remove("fadeOut");
+    //   } else {
+    //     upElem.classList.add("fadeOut");
+    //     upElem.classList.remove("fadeIn");
+    //   }
+    // });
+
+    // Scrolling with raf
+
+    let links = document.querySelectorAll('[href^="#"]'),
+      speed = 0.3;
+
+    links.forEach((link) => {
+      link.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        let widthTop = document.documentElement.scrollTop,
+          hash = this.hash,
+          toBlock = document.querySelector(hash).getBoundingClientRect().top,
+          start = null;
+
+        requestAnimationFrame(step);
+
+        function step(time) {
+          if (start === null) {
+            start = time;
+          }
+
+          let progress = time - start,
+            r =
+              toBlock < 0
+                ? Math.max(widthTop - progress / speed, widthTop + toBlock)
+                : Math.min(widthTop + progress / speed, widthTop + toBlock);
+
+          document.documentElement.scrollTo(0, r);
+
+          if (r != widthTop + toBlock) {
+            requestAnimationFrame(step);
+          } else {
+            location.hash = hash;
+          }
+        }
+      });
+    });
+  }
+  scrolling();
 
   new Swiper(".swiper-container", {
     // Optional parameters
