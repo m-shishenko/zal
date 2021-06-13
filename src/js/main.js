@@ -112,17 +112,17 @@ document.addEventListener("DOMContentLoaded", () => {
       body = document.querySelector("body"),
       linkElement = document.querySelectorAll(".popup-menu__item > a"),
       popupMenu = document.querySelector(".popup-menu"),
-      popupMenuBtn = document.querySelector(".popup-menu__inner > button");
+      popupMenuBtn = document.querySelector(".popup-menu__inner > a");
 
     function openMenu() {
-      popupMenu.classList.remove("hide", "fade-hide");
-      popupMenu.classList.add("show", "fade-show");
+      popupMenu.classList.remove("close");
+      popupMenu.classList.add("open");
       body.style.overflow = "hidden";
     }
 
     function closeMenu() {
-      popupMenu.classList.remove("show", "fade-show");
-      popupMenu.classList.add("hide", "fade-hide");
+      popupMenu.classList.remove("open");
+      popupMenu.classList.add("close");
       body.style.overflow = "";
     }
 
@@ -159,20 +159,6 @@ document.addEventListener("DOMContentLoaded", () => {
   validInputTel();
 
   function scrolling() {
-    // const upElem = document.querySelector(upSelector);
-
-    // window.addEventListener("scroll", () => {
-    //   if (document.documentElement.scrollTop > 1650) {
-    //     upElem.classList.add("animated", "fadeIn");
-    //     upElem.classList.remove("fadeOut");
-    //   } else {
-    //     upElem.classList.add("fadeOut");
-    //     upElem.classList.remove("fadeIn");
-    //   }
-    // });
-
-    // Scrolling with raf
-
     let links = document.querySelectorAll('[href^="#"]'),
       speed = 0.3;
 
@@ -213,7 +199,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   new Swiper(".swiper-container", {
     // Optional parameters
-    // direction: "horizontal",
     slidesPerView: 4,
     breakpoints: {
       // when window width is >= 320px

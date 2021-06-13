@@ -114,6 +114,13 @@
 
     &-item {
       position: relative;
+      display: none;
+      &.show {
+        display: block;
+      }
+      &.hide {
+        display: none;
+      }
     }
 
     &-wrapper {
