@@ -169,7 +169,8 @@ function images() {
 function watchFiles() {
   gulp.watch([path.watch.html], html);
   gulp.watch([path.watch.css], css);
-  gulp.watch([path.watch.js], buildDevdJs);
+  // gulp.watch([path.watch.js], buildDevdJs);
+  gulp.watch([path.watch.js], buildProdJs);
   gulp.watch([path.watch.images], images);
   gulp.watch([path.watch.fonts], fonts);
 }
@@ -180,13 +181,14 @@ function clean() {
 
 const build = gulp.series(
   clean,
-  gulp.parallel(buildDevdJs, css, html, images, fonts)
+  gulp.parallel(buildProdJs, css, html, images, fonts)
 );
 const watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.fonts = fonts;
 exports.images = images;
-exports.buildDevdJs = buildDevdJs;
+// exports.buildDevdJs = buildDevdJs;
+exports.buildProdJs = buildProdJs;
 exports.css = css;
 exports.html = html;
 exports.build = build;
